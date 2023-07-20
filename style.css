@@ -40,6 +40,7 @@ header {
   width: 100%;
   top: 0;
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -52,14 +53,15 @@ body {
 }
 /* ============ Clases ============ */
 
+.navbar {
+  gap: 10rem;
+}
+
 .navbar,
 .lista-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.navbar {
-  gap: 10rem;
 }
 
 .lista-nav {
@@ -106,7 +108,7 @@ main {
   height: 100%;
   max-width: 1300px;
   margin-top: 50px;
-  padding: 85px 70px;
+  padding: 0px 0px 0px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +116,6 @@ main {
 }
 .hero-items {
   display: flex;
-  gap: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -130,8 +131,8 @@ main {
   max-width: 1300px;
 }
 .image {
-  height: 400px;
-  width: 500px;
+  height: 800px;
+  width: 800px;
 }
 .hero-info h1 {
   font-size: 60px;
