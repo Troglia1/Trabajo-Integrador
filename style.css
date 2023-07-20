@@ -46,19 +46,19 @@ body {
 /* ======= MENU =======*/
 
 #cart-toggle,
-#menu-toggle,
-.menu-label {
+#men-toggle,
+.men-label {
   display: none;
 }
 /* ============ Clases ============ */
 
-.nav,
+.navbar,
 .lista-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav {
+.navbar {
   gap: 10rem;
 }
 
@@ -130,10 +130,8 @@ main {
   max-width: 1300px;
 }
 .image {
-  background-image: url(/assets/img/lubricentro.webp);
-  border-radius: 500px;
+  height: 400px;
   width: 500px;
-  height: 500px;
 }
 .hero-info h1 {
   font-size: 60px;
