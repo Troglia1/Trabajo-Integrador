@@ -4,7 +4,7 @@
 
   --background: black;
   --secondary: black;
-  --nav-bg: #a31c32;
+  --nav-bg: #4d2222;
   --bg-white: #fff;
 
   /* text == colors */
@@ -13,7 +13,7 @@
   --text-white: #f3f4f6;
 
   /* button == colors */
-  --btn-circle: #cd502d;
+  --btn-circle: #7726269d;
 }
 
 /* ================ */
@@ -31,7 +31,7 @@
 /*====== HEADER ======*/
 
 header {
-  background: linear-gradient(to bottom, #cd502d, black);
+  background: linear-gradient(to right, #020200, #c06363, rgb(161, 46, 46));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +68,7 @@ body {
   gap: 3rem;
 }
 .lista-nav a {
-  color: var(--text-gray);
+  color: black;
 }
 .search-icon {
   width: 30px;
@@ -84,7 +84,7 @@ body {
 
 .lista-nav .active {
   font-weight: 600;
-  color: var(--text-white);
+  color: black;
 }
 .lista-nav .active-btn {
   color: var(--text-white);
@@ -141,7 +141,7 @@ main {
   text-align: left;
 }
 .hero-info span {
-  background: linear-gradient(to top, rgb(165, 82, 14), black);
+  background: linear-gradient(to top, #ff0000, rgb(211, 207, 170));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -228,7 +228,7 @@ main {
   height: 100%;
   background-color: var(--secondary);
   color: var(--text-white);
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 .subtitle-cards {
   display: flex;
@@ -245,40 +245,36 @@ main {
   font-size: 30px;
   font-weight: 700;
 }
-.advantages-cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  text-align: left;
-  letter-spacing: 2px;
-  line-height: 30px;
-  color: var(--text-white);
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-.style-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.advantage-card {
+  background: linear-gradient(27deg, rgb(155, 52, 52) 50%, #636161 50%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 10px 0;
-  margin: 0 50px;
-  height: 350px;
-  width: 350px;
-  gap: 10px;
-  background-color: rgb(192, 87, 26);
-  border-radius: 50px;
 }
-.style-cards i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
+
+.advantage-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
-.stylecards-icon {
-  width: 50px;
-  height: 50px;
+
+.advantage-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #020200;
+}
+
+.advantage-description {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
 }
 
 /* ============== contacto ============== */

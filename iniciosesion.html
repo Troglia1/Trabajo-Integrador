@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/pagina2.css" />
-<html>
+<html lang="en">
   <head>
-    <title>Formulario de Inicio de Sesión</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/assets/pagina2.css" />
   </head>
-  <body class="sasa">
-    <div class="login-form">
-      <h2>Iniciar sesión</h2>
-      <form action="login.php" method="POST">
+  <body>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form>
         <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required /><br />
-
+        <input type="text" id="username" name="username" required />
         <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required /><br />
-
-        <input type="submit" value="Iniciar sesión" />
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Iniciar Sesión</button>
       </form>
-      <button onclick="window.location.href='index.html'" class="button-volver">
-        Volver
-      </button>
+      <a href="index.html" class="back-btn">Volver a la página principal</a>
     </div>
   </body>
 </html>

@@ -27,12 +27,12 @@
   .active-btn {
     background-color: var(--btn-clr);
   }
-  .menu-label {
+  .men-label {
     display: flex;
     cursor: pointer;
     order: 2;
   }
-  #menu-toggle:checked + .lista-nav {
+  #men-toggle:checked + .lista-nav {
     display: flex;
   }
 
@@ -43,7 +43,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
   }
   .hero-info h1 {
     width: 90%;
@@ -53,7 +53,7 @@
   .hero-info p {
     text-align: center;
   }
-  .image {
+  #hero {
     display: none;
   }
   /* info */
@@ -62,16 +62,22 @@
     justify-content: center;
     align-items: center;
   }
-  .style-cards {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .advantage-card {
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
-    margin: 0 35px;
-    width: 250px;
-    height: 250px;
-
-    /* TUVE PROBLEMAS CUANDO QUIERO HACER CUADRADOS LOS DIVS DE LAS CARDS, POR ALGUNA RAZON SE ME SALE DEL LÍMITE DE LA PÁGINA Y SE ROMPE, NO ENCUENTRO EL MOTIVO 
-    CUANDO LE DOY WIDTH Y HEIGHT 250PX SE ROMPE HACIA LA DERECHA */
+    padding: 20px 0;
+    margin: 20px;
+    width: 350px;
+    height: 350px;
+  }
+  #contacto {
+    width: 350px;
+    height: 350px;
   }
 }
 @media (max-width: 576px) {
@@ -125,21 +131,6 @@
   }
 }
 @media (max-width: 375px) {
-  #hero {
-    margin-top: -30px;
-  }
-  .hero-info {
-    padding: 30px 0;
-  }
-  .hero-info h1 {
-    /* width: 60%; */
-    max-width: 375px;
-    font-size: 45px;
-  }
-  .hero-info p {
-    width: 70%;
-  }
-
   .middle-text {
     padding: 0 30px;
     justify-content: center;
