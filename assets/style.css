@@ -2,18 +2,18 @@
 :root {
   /* bg == colors */
 
-  --background: black;
-  --secondary: black;
+  --background: rgb(3, 3, 3);
+  --secondary: rgb(255, 255, 255);
   --nav-bg: #4d2222;
   --bg-white: #fff;
 
   /* text == colors */
 
   --text-gray: #adb9c7;
-  --text-white: #f3f4f6;
+  --text-white: #000000;
+  --text-black: rgb(0, 0, 0);
 
   /* button == colors */
-  --btn-circle: #7726269d;
 }
 
 /* ================ */
@@ -31,12 +31,11 @@
 /*====== HEADER ======*/
 
 header {
-  background: linear-gradient(to right, #020200, #c06363, rgb(161, 46, 46));
+  background: linear-gradient(to right, #020200, rgb(161, 46, 46));
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position: fixed;
   width: 100%;
   top: 0;
 }
@@ -68,7 +67,7 @@ body {
   gap: 3rem;
 }
 .lista-nav a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .search-icon {
   width: 30px;
@@ -84,35 +83,56 @@ body {
 
 .lista-nav .active {
   font-weight: 600;
-  color: black;
-}
-.lista-nav .active-btn {
-  color: var(--text-white);
-  cursor: pointer;
+  color: #fff;
 }
 
 /* BODY */
-.bg-container {
-  display: flex;
-}
 main {
   background: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
 }
+
+.texto {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #020200, rgb(161, 46, 46));
+  justify-content: center;
+  align-items: center;
+  padding: 5px 320px;
+}
+
+.texto h1 {
+  color: #9b601d;
+  animation: mover 4s 1;
+}
+
+@keyframes mover {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.texto p {
+  font-weight: 800;
+  padding: 5px 0px;
+  animation: mover 3s 1;
+}
+
 #hero {
-  background-image: url(/assets/img/aceite3.webp);
+  background-image: url(https://ss-static-01.esmsv.com/id/144323/galeriaimagenes/obtenerimagen/?id=9&tipoEscala=crop&width=1920&height=1080);
   background-size: cover;
   background-position: center;
-  border-radius: 50px;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
-  max-width: 1300px;
-  margin-top: 50px;
-  padding: 0px 0px 0px 100px;
+  padding: 0px 0px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,10 +155,12 @@ main {
   max-width: 1300px;
 }
 .hero-info h1 {
+  background: rgba(255, 255, 255, 0.377);
   font-size: 60px;
   font-weight: 800;
   min-width: 350px;
-  text-align: left;
+  text-align: center;
+  border-radius: 25px;
 }
 .hero-info span {
   background: linear-gradient(to top, #ff0000, rgb(211, 207, 170));
@@ -147,11 +169,17 @@ main {
   -webkit-background-clip: text;
 }
 .hero-info p {
-  font-size: 14px;
-  text-align: left;
+  background: rgba(255, 255, 255, 0.377);
+  font-size: 18px;
+  text-align: center;
   letter-spacing: 2px;
   line-height: 30px;
-  color: var(--text-gray);
+  color: var(--text-black);
+  border-radius: 25px;
+}
+
+.hero-info b {
+  font-weight: 800;
 }
 .page-name {
   color: var(--text-white);
@@ -161,38 +189,37 @@ main {
 
 .buttons {
   display: flex;
-  align-items: flex-start;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
-}
-.buttons p {
-  font-size: 16px;
   color: var(--text-white);
 }
-.buttons > :first-child {
-  background-color: var(--btn-circle);
-  max-width: fit-content;
-  padding: 7px;
-  border-radius: 25px;
-  cursor: pointer;
-}
-.buttons > :first-child a {
-  text-decoration: none;
-  color: var(--text-white);
-}
-.buttons > :last-child {
-  border: solid;
-  border-color: var(--btn-circle);
-  color: black;
-  max-width: fit-content;
-  padding: 6px;
-  border-radius: 25px;
-  cursor: pointer;
-  text-decoration: none;
-}
+
 .buttons > :last-child a {
   text-decoration: none;
-  color: var(--text-gray);
+  color: var(--text-white);
+}
+
+.buttons:hover a {
+  background: none;
+}
+
+button {
+  height: 50px;
+  font-size: 16px;
+  background-color: rgb(163, 50, 50);
+  border: solid;
+  border-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  max-width: fit-content;
+  padding: 15px 22px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.96);
 }
 
 /* texto entre cards y hero */

@@ -1,5 +1,5 @@
 :root {
-  --btn-color: #8d3020;
+  --btn-color: #3a4fc5;
   --background: #ac3030;
   --secondary: #464343;
 }
@@ -8,22 +8,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    28deg,
-    var(--background) 50%,
-    var(--secondary) 50%
-  );
+  background-image: url(https://fondosmil.com/fondo/67205.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .login-container {
+  background: #000000d5;
   width: 300px;
   margin: 100px auto;
   padding: 20px;
-  background: linear-gradient(
-    28deg,
-    var(--secondary) 50%,
-    var(--background) 50%
-  );
   border: 1px solid #0a0808;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -71,7 +65,7 @@ button:hover {
   margin-top: 20px;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  background-color: rgb(136, 37, 37);
+  background-color: var(--btn-color);
   border-radius: 80px;
   padding: 10px;
 }

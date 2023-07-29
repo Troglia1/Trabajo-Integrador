@@ -38,25 +38,19 @@
 
   /* HERO */
 
-  .hero-info {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .hero-info h1 {
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-  }
-  .hero-info p {
-    text-align: center;
-  }
   #hero {
     display: none;
   }
   /* info */
+
+  .texto p {
+    display: none;
+  }
+
+  .texto h1 {
+    padding: 0px;
+    height: 100px;
+  }
 
   #cards {
     justify-content: center;
