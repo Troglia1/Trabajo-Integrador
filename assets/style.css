@@ -43,6 +43,7 @@ header {
 body {
   font-family: "Poppins", sans-serif;
 }
+
 /* ====== Inicio ======*/
 
 #cart-toggle,
@@ -205,21 +206,40 @@ main {
 }
 
 button {
-  height: 50px;
-  font-size: 16px;
-  background-color: rgb(163, 50, 50);
-  border: solid;
-  border-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  max-width: fit-content;
-  padding: 15px 22px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  cursor: pointer;
+  padding: 0.8em 1.8em;
+  border: 2px solid #c94028;
+  position: relative;
+  overflow: hidden;
+  background-color: #c94028;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #000000;
 }
 
-button:active {
-  transform: scale(0.96);
+button::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  background: #fcfcfc;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: #111;
 }
 
 /* texto entre cards y hero */
@@ -455,7 +475,7 @@ button:active {
   position: absolute;
   inset: 0;
   border-radius: 50px;
-  background: linear-gradient(45deg, #5476be, #ffffff);
+  background: linear-gradient(45deg, #5476be, #bbb);
   opacity: 0;
   transition: 0.5s;
 }
@@ -470,7 +490,7 @@ button:active {
   height: 100%;
   width: 100%;
   border-radius: 60px;
-  background: linear-gradient(45deg, #5476be, #ffffff);
+  background: linear-gradient(45deg, #5476be, #bbb);
   opacity: 8;
   transition: 0.5s;
   z-index: -1;
