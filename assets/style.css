@@ -2,7 +2,7 @@
 :root {
   /* bg == colors */
 
-  --background: rgb(3, 3, 3);
+  --background: rgb(2, 0, 0);
   --secondary: rgb(255, 255, 255);
   --nav-bg: #4d2222;
   --bg-white: #fff;
@@ -88,7 +88,7 @@ body {
 
 /* BODY */
 main {
-  background: var(--background);
+  background: var(--secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,10 +99,10 @@ main {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #020200, rgb(161, 46, 46));
+  background: var(--background);
   justify-content: center;
   align-items: center;
-  padding: 5px 320px;
+  padding: 35px 320px;
 }
 
 .texto h1 {
@@ -204,7 +204,7 @@ main {
   background: none;
 }
 
-button {
+.buttons {
   height: 50px;
   font-size: 16px;
   background-color: rgb(163, 50, 50);
@@ -218,7 +218,7 @@ button {
   cursor: pointer;
 }
 
-button:active {
+.buttons:active {
   transform: scale(0.96);
 }
 
@@ -279,13 +279,39 @@ button:active {
 }
 
 .advantage-card {
-  background: linear-gradient(27deg, rgb(155, 52, 52) 50%, #636161 50%);
+  position: relative;
+
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   text-align: center;
+  cursor: pointer;
+  overflow: hidden;
 }
 
+.advantage-card:hover {
+  color: #fff;
+}
+
+.advantage-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background-color: rgb(88, 38, 35);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: 1s ease;
+}
+
+.advantage-card:hover::before {
+  width: 200%;
+  left: 50%;
+  transform: skew(45deg);
+  translate: (-50%, -50%);
+}
 .advantage-icon {
   font-size: 48px;
   margin-bottom: 10px;
@@ -309,11 +335,12 @@ button:active {
 #contacto {
   max-width: 1300px;
   width: 100%;
-  padding: 100px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: space-around;
   background-color: var(--secondary);
   color: var(--text-white);
+  border-bottom: #000000 1px solid;
 }
 .contact-us {
   display: flex;
@@ -382,14 +409,15 @@ button:active {
 #footer {
   max-width: 1300px;
   width: 100%;
-  background-color: var(--background);
-  padding: 50px 0;
+  background-color: var(--secondary);
+  padding: 10px 0;
 }
 .footer-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 30px 0;
+  flex-direction: row;
   color: var(--text-white);
+  gap: 3rem;
+  font-size: 14px;
 }
