@@ -2,7 +2,7 @@
 :root {
   /* bg == colors */
 
-  --background: rgb(255, 255, 255);
+  --background: rgba(184, 176, 176, 0.788);
   --secondary: rgb(0, 0, 0);
   --nav-bg: #4d2222;
   --bg-white: #fff;
@@ -102,11 +102,11 @@ main {
   background: var(--secondary);
   justify-content: center;
   align-items: center;
-  padding: 35px 320px;
+  padding: 5px 320px;
 }
 
 .texto h1 {
-  color: #9b601d;
+  color: #ff8800;
   animation: mover 4s 1;
 }
 
@@ -267,11 +267,30 @@ button:hover {
 /* cards */
 
 #cards {
-  max-width: 1300px;
   width: 100%;
   height: 100%;
   color: var(--text-black);
-  padding: 50px 10px;
+  padding: 20px 10px;
+  background-image: url(/assets/img/Garage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.subtitle-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  flex-direction: column;
+  letter-spacing: 2px;
+  line-height: 30px;
+  color: rgb(77, 11, 11);
+  padding: 50px 0;
+}
+.subtitle-cards h2 {
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .card {
@@ -303,57 +322,95 @@ button:hover {
 .content p {
   margin-bottom: 0;
 }
-.subtitle-cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  flex-direction: column;
-  letter-spacing: 2px;
-  line-height: 30px;
-  color: var(--text-black);
-  padding: 30px 0;
-}
-.subtitle-cards h2 {
-  font-size: 30px;
-  font-weight: 700;
-}
+
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding: 0px 0px 25px 60px;
 }
 
-.advantage-card {
-  background: linear-gradient(27deg, rgb(155, 52, 52) 50%, #636161 50%);
-  padding: 20px;
+.card {
+  background: rgba(255, 255, 255, 0.726);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+  box-shadow: 0 10px 20px rgba(248, 0, 0, 0.2);
+  padding: 42px;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.advantage-icon {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.advantage-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #020200;
-}
-
-.advantage-description {
-  font-size: 20px;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
   color: #000000;
-  font-weight: 500;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.content .para {
+  line-height: 1.5;
+}
+
+.content .btn {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.content .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #ff0303;
+}
+
+.content .btn:active {
+  box-shadow: none;
 }
 
 /* ============== contacto ============== */
 
 #contacto {
-  max-width: 1300px;
   width: 100%;
   padding: 30px 0;
   display: flex;
@@ -428,9 +485,8 @@ button:hover {
 
 /* footer */
 #footer {
-  max-width: 1300px;
   width: 100%;
-  background-color: rgba(252, 251, 251, 0.788);
+  background-color: rgba(0, 0, 0, 0.788);
   padding: 10px 0;
 }
 .footer-info {
