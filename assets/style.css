@@ -2,7 +2,7 @@
 :root {
   /* bg == colors */
 
-  --background: rgba(184, 176, 176, 0.788);
+  --background: rgb(255, 255, 255);
   --secondary: rgb(0, 0, 0);
   --nav-bg: #4d2222;
   --bg-white: #fff;
@@ -284,7 +284,6 @@ button:hover {
   width: auto;
   flex-direction: column;
   letter-spacing: 2px;
-  line-height: 30px;
   color: rgb(77, 11, 11);
   padding: 50px 0;
 }
@@ -414,8 +413,8 @@ button:hover {
   width: 100%;
   padding: 30px 0;
   display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.267);
+  justify-content: center;
+  background-color: var(--background);
   color: var(--text-black);
   border-bottom: #000000 1px solid;
 }
@@ -474,34 +473,27 @@ button:hover {
   cursor: pointer;
 }
 /* imagen de contacto */
-.contact-image {
-  background-size: cover;
-  background-image: url(https://kinsta.com/es/wp-content/uploads/sites/8/2018/03/formulario-de-contacto-1-1024x512.png);
-  border-radius: 50%;
-  height: 200px;
-  width: 400px;
-  border: solid black;
-}
 
 /* footer */
 #footer {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.788);
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .footer-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: black;
+  color: var(--text-white);
   gap: 3rem;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .ull {
   position: relative;
   display: flex;
+  justify-content: center;
   gap: 25px;
 }
 .ull li {
@@ -528,7 +520,7 @@ button:hover {
   position: absolute;
   inset: 0;
   border-radius: 50px;
-  background: linear-gradient(45deg, #5476be, #bbb);
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
   opacity: 0;
   transition: 0.5s;
 }
@@ -543,11 +535,11 @@ button:hover {
   height: 100%;
   width: 100%;
   border-radius: 60px;
-  background: linear-gradient(45deg, #5476be, #bbb);
+  background: rgba(192, 23, 23, 0.61);
   opacity: 8;
   transition: 0.5s;
   z-index: -1;
-  filter: blur(15px);
+  filter: blur(55px);
 }
 .ull li:hover::after {
   opacity: 0.5;
