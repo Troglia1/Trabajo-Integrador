@@ -1,51 +1,37 @@
 /* Media Query para Tablets y Dispositivos Móviles */
 @media screen and (max-width: 768px) {
   /* Header */
-  header {
-    padding: 10px;
+  /* navbar */
+  .nav {
+    gap: 10px;
   }
-
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   .lista-nav {
+    position: absolute;
+    top: 65px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    border-top: 0;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    background-color: var(--nav-bg);
-    position: absolute;
-    top: 5rem;
-    left: -100%;
-    opacity: 0;
-    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  }
+    background-color: rgb(126, 48, 24);
+    border-radius: 15px;
 
-  .men-label {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    color: var(--text-white);
-    font-size: 1.5rem;
+    padding: 45px 30px;
+    display: none;
   }
-
-  .men-toggle:checked ~ .lista-nav {
-    left: 0;
-    opacity: 1;
-  }
-
   .lista-nav a {
-    color: var(--text-white);
-    font-size: 1.2rem;
+    font-size: 18px;
   }
-
-  .logo {
-    width: 120px;
-    height: auto;
+  .active-btn {
+    background-color: var(--btn-clr);
+  }
+  .men-label {
+    display: flex;
+    cursor: pointer;
+    order: 2;
+  }
+  #men-toggle:checked + .lista-nav {
+    display: flex;
   }
 
   /* Hero Section */
@@ -72,6 +58,10 @@
     font-size: 24px;
   }
 
+  .texto p {
+    display: none;
+  }
+
   /* Middle Text Section */
   #info-maps .middle-text {
     padding: 20px;
@@ -80,7 +70,6 @@
   /* Cards Section */
   #cards {
     padding: 10px;
-    background: none;
   }
 
   .subtitle-cards h2 {
