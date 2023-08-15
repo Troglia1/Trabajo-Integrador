@@ -8,8 +8,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(https://fondosmil.com/fondo/67205.jpg);
+  background-image: url(/assets/img/fondo.jpg);
   background-position: center;
+  background-size: cover;
+  background-position-y: -400px;
 }
 
 .login-container {
