@@ -26,6 +26,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Poppins", sans-serif;
 }
 
 /*====== HEADER ======*/
@@ -43,7 +44,8 @@ header {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--background);
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23363232' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ====== Inicio ======*/
@@ -425,6 +427,7 @@ button:hover {
   display: flex;
   justify-content: center;
   background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23363232' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   color: var(--text-black);
   border-bottom: #000000 1px solid;
 }
