@@ -196,6 +196,7 @@ main {
   justify-content: center;
   gap: 2rem;
   color: var(--text-black);
+  cursor: pointer;
 }
 
 .buttons > :last-child a {
@@ -220,6 +221,7 @@ button {
   z-index: 1;
   font-family: inherit;
   color: #000000;
+  cursor: pointer;
 }
 
 button::before {
@@ -430,7 +432,7 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 0px 0;
 }
 .contact-info {
   display: flex;
