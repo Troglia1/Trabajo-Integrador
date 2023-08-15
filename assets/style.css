@@ -256,6 +256,7 @@ button:hover {
   height: 100%;
   color: var(--text-black);
   padding: 90px 25px;
+  margin: 0 auto;
 }
 .middle-text {
   display: flex;
@@ -284,6 +285,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 .subtitle-cards {
